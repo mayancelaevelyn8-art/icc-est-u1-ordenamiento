@@ -27,19 +27,16 @@ public class App {
         //Metodo de InstertionSort
         System.out.println("--- Selection Insertion ---");
         InsertionSort insertionSort = new InsertionSort();
-        printArreglo(d, "Original:");
+        System.out.println("Original:");
+        printArreglo(d);
         insertionSort.sort(d);
-        printArreglo(d, "Ordenado Des:");
+        System.out.println("Ordenado Des:");
+        printArreglo(d);
     }
 
     public static void printArreglo(int[] arr){
         for(int i = 0; i < arr.length; i++)
             System.out.print(arr[i] + " - ");
         System.out.println();
-    }
-
-    public static void printArreglo(int[] arr, String title){
-        System.out.println(title);
-        printArreglo(arr);
     }
 }
