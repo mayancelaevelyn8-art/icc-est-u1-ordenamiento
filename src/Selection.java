@@ -6,9 +6,9 @@ public class Selection {
             int min = i;
             for (int j = i + 1; j < arreglo.length; j++) {
                 comparaciones++;
+                //Comparaciones
                 if (arreglo[j] < arreglo[min]) {
                     min = j;
-
                 }
             }
             if (min != i) {
