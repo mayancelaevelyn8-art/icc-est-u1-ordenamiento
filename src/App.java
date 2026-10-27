@@ -1,14 +1,58 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.List;
+
 import models.Estudiantes;
 
 public class App {
 
     public static void main(String[] args) throws Exception {
         //runEjemplosPrimitivos();
-        runEjemploObjetos();
-        runComparators();
+        //runEjemploObjetos();
+        //runComparators();
+        runComparatorsObj1();
+        runComparatorsObj2();
     }
+
+    private static void runComparatorsObj2() {
+        Estudiantes e1 = new Estudiantes("Juan", 10);
+        Estudiantes[] estudiantes = {e1,
+            new Estudiantes("Maria", 7),
+            new Estudiantes("Diego", 3.5),
+            new Estudiantes("Pedro", 6.8),
+        };
+        Comparator.naturalOrder();
+        Comparator.reverseOrder();
+        Comparator<Estudiantes> compNota = Comparator.comparingDouble(e-> e.getNota ());
+        Arrays.sort(estudiantes, compNota);
+        for(int i = 0; i < estudiantes.length; i++)
+            System.out.print(estudiantes[i] + " - ");
+        System.out.println();
+
+        estudinatesLista.sort(compNota);
+        System.out.println(estudinatesLista);
+    }
+
+    private static void runComparatorsObj1() {
+        List<Integer> numeros = new ArrayList<>(List.of(5, 6, 4, 1, 2, 3));
+
+        //Ordenenra de menor a mayor
+        numeros.sort(Comparator.naturalOrder());
+        numeros.sort(null);
+        System.out.println(numeros);
+        //Ordenar de mayor a menor
+        numeros.sort(Comparator.reverseOrder());
+        System.out.println(numeros);
+
+    }
+
+    static List<Estudiantes> estudinatesLista = new ArrayList<>(List.of(
+        new Estudiantes("Juan", 10),
+        new Estudiantes("Maria", 7),
+        new Estudiantes("Diego", 3.5),
+        new Estudiantes("Pedro", 6.8)
+    ));
 
     private static void runComparators() {
         Integer[] original = {5, 6, 4, 1, 2, 3};
