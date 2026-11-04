@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-
+import models.Comparators;
 import models.Estudiantes;
 
 public class App {
@@ -11,8 +11,11 @@ public class App {
         //runEjemplosPrimitivos();
         //runEjemploObjetos();
         //runComparators();
-        runComparatorsObj1();
-        runComparatorsObj2();
+        //runComparatorsObj1();
+        //runComparatorsObj2();
+        //Comparators comparators = new Comparators();
+        Comparable comparable = new Comparable();
+
     }
 
     private static void runComparatorsObj2() {
